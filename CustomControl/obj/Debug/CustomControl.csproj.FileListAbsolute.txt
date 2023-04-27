@@ -6,3 +6,12 @@ D:\M13\Arduino3-4\CustomControl\obj\Debug\CustomControl.csproj.GenerateResource.
 D:\M13\Arduino3-4\CustomControl\obj\Debug\CustomControl.csproj.CoreCompileInputs.cache
 D:\M13\Arduino3-4\CustomControl\obj\Debug\CustomControl.dll
 D:\M13\Arduino3-4\CustomControl\obj\Debug\CustomControl.pdb
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\bin\Debug\CustomControl.dll
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\bin\Debug\CustomControl.pdb
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\obj\Debug\CustomControl.csproj.AssemblyReference.cache
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\obj\Debug\CustomControl.Properties.Resources.resources
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\obj\Debug\CustomControl.AccessControl.resources
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\obj\Debug\CustomControl.csproj.GenerateResource.cache
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\obj\Debug\CustomControl.csproj.CoreCompileInputs.cache
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\obj\Debug\CustomControl.dll
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\CustomControl\obj\Debug\CustomControl.pdb

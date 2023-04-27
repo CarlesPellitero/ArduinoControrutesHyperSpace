@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32630.192
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableLayout", "TableLayout\TableLayout.csproj", "{97CAEF90-493E-4E97-AB08-25BF5B571467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControl", "..\CustomControl\CustomControl.csproj", "{9C0A5513-0239-4CAA-B555-20688B605D28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{97CAEF90-493E-4E97-AB08-25BF5B571467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97CAEF90-493E-4E97-AB08-25BF5B571467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97CAEF90-493E-4E97-AB08-25BF5B571467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0A5513-0239-4CAA-B555-20688B605D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0A5513-0239-4CAA-B555-20688B605D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0A5513-0239-4CAA-B555-20688B605D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0A5513-0239-4CAA-B555-20688B605D28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

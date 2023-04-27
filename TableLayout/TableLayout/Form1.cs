@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomControl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,18 +24,14 @@ namespace TableLayout
         {
             conteoCliks++;
             NumeroButton++;
-            
-                Button boton = new Button();
-                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
-                boton = new Button();
-                boton.Width = 60;
-                boton.Height = 20;
-                boton.Text = String.Format("Button"+NumeroButton);
-                tableLayoutPanel1.Controls.Add(boton);
-                if (conteoCliks >= 3)
-                {
-                    RemoveArbitraryRow(tableLayoutPanel1, 2);
-                }
+
+            AccessControl userControl = new AccessControl();
+            tableLayoutPanel1.Controls.Add(userControl);
+
+            if (conteoCliks >= 3)
+            {
+                RemoveArbitraryRow(tableLayoutPanel1, 2);
+            }
                  
         }
 

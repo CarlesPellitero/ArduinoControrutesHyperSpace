@@ -70,7 +70,8 @@ namespace CustomControl
             get { return routeImageVar; }
             set { picRoute.Image = value; }
         }
-        public enum Validations { 
+        public enum Validations
+        {
             Warning,
             Okay
         };
@@ -93,6 +94,5 @@ namespace CustomControl
                 picValidation.Image = Image.FromFile(Path.Combine(Application.StartupPath, "warning.png"));
             }
         }
-
     }
 }
