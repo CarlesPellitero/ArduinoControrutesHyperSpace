@@ -1,0 +1,11 @@
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\bin\Debug\TableLayout.exe.config
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\bin\Debug\TableLayout.exe
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\bin\Debug\TableLayout.pdb
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\obj\Debug\TableLayout.csproj.AssemblyReference.cache
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\obj\Debug\TableLayout.csproj.SuggestedBindingRedirects.cache
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\obj\Debug\TableLayout.Form1.resources
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\obj\Debug\TableLayout.Properties.Resources.resources
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\obj\Debug\TableLayout.csproj.GenerateResource.cache
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\obj\Debug\TableLayout.csproj.CoreCompileInputs.cache
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\obj\Debug\TableLayout.exe
+C:\Users\choui\OneDrive\Escritorio\c#\Trabajo Individual\TableLayout\TableLayout\obj\Debug\TableLayout.pdb
