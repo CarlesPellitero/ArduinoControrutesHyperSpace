@@ -192,7 +192,6 @@ namespace CustomControl
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMain);
-            this.Enabled = false;
             this.Name = "AccessControl";
             this.Size = new System.Drawing.Size(592, 148);
             this.Load += new System.EventHandler(this.UserControl1_Load);

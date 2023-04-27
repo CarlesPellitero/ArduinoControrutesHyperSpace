@@ -13,7 +13,6 @@ D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\Ta
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\bin\Debug\TableLayout.exe
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\bin\Debug\TableLayout.pdb
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\obj\Debug\TableLayout.csproj.AssemblyReference.cache
-D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\obj\Debug\TableLayout.Form1.resources
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\obj\Debug\TableLayout.Properties.Resources.resources
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\obj\Debug\TableLayout.csproj.GenerateResource.cache
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\obj\Debug\TableLayout.csproj.CoreCompileInputs.cache
@@ -22,3 +21,4 @@ D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\Ta
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\bin\Debug\CustomControl.dll
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\bin\Debug\CustomControl.pdb
 D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\obj\Debug\TableLayout.csproj.CopyComplete
+D:\2022.2023\M13\Arduino\Activitat34\ArduinoControrutesHyperSpace\TableLayout\TableLayout\obj\Debug\TableLayout.ControlRoutes.resources
