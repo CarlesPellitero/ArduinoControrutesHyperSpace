@@ -70,6 +70,7 @@ namespace CustomControl
             get { return routeImageVar; }
             set { picRoute.Image = value; }
         }
+
         public enum Validations
         {
             Warning,
@@ -83,9 +84,6 @@ namespace CustomControl
             get { return ValMsg; }
             set { ValMsg = value; }
         }
-
-
-
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
