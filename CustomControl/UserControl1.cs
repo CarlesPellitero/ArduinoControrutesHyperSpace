@@ -48,27 +48,12 @@ namespace CustomControl
             set { rtxtShip.Text = value; }
         }
 
-        private Image shipImgVar;
+        private string shipTypVar;
 
-        public Image shipImage
+        public string shipType
         {
-            get { return shipImgVar; }
-            set { picShip.Image = value; }
-        }
-
-        private Image beaconImageVar;
-
-        public Image beaconImage
-        {
-            get { return beaconImageVar; }
-            set { picBeacon.Image = value; }
-        }
-        private Image routeImageVar;
-
-        public Image routeImage
-        {
-            get { return routeImageVar; }
-            set { picRoute.Image = value; }
+            get { return shipTypVar; }
+            set { shipTypVar = value; }
         }
 
         public enum Validations
@@ -85,11 +70,23 @@ namespace CustomControl
             set { ValMsg = value; }
         }
 
+
+
+
         private void UserControl1_Load(object sender, EventArgs e)
         {
             if (ValMsg == Validations.Warning)
             {
-                picValidation.Image = Image.FromFile(Path.Combine(Application.StartupPath, "warning.png"));
+                picValidation.Image = Image.FromFile(Path.Combine(Application.StartupPath, "alert.png"));
+            }
+            if (shipTypVar.Equals("First Order Navy Spaceship") || shipTypVar.Equals("First Order Consular Spaceship"))
+            {
+                picShip.Image = Image.FromFile(Path.Combine(Application.StartupPath, "s tar-wars.png.png"));
+
+            }
+            else if (shipTypVar.Equals("Cargo Spaceship"))
+            {
+                picShip.Image = Image.FromFile(Path.Combine(Application.StartupPath, "PersonalShipW.png"));
             }
         }
     }

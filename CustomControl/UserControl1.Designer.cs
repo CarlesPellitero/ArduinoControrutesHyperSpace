@@ -62,7 +62,7 @@ namespace CustomControl
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(592, 148);
+            this.panelMain.Size = new System.Drawing.Size(675, 196);
             this.panelMain.TabIndex = 0;
             // 
             // panelShip
@@ -71,17 +71,19 @@ namespace CustomControl
             this.panelShip.Controls.Add(this.panelShipName);
             this.panelShip.Controls.Add(this.picValidation);
             this.panelShip.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShip.Location = new System.Drawing.Point(0, 56);
+            this.panelShip.Location = new System.Drawing.Point(0, 71);
             this.panelShip.Name = "panelShip";
-            this.panelShip.Size = new System.Drawing.Size(592, 92);
+            this.panelShip.Size = new System.Drawing.Size(675, 122);
             this.panelShip.TabIndex = 2;
             // 
             // rtxtShip
             // 
+            this.rtxtShip.BackColor = System.Drawing.Color.Navy;
+            this.rtxtShip.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtxtShip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxtShip.Location = new System.Drawing.Point(0, 36);
+            this.rtxtShip.Location = new System.Drawing.Point(0, 43);
             this.rtxtShip.Name = "rtxtShip";
-            this.rtxtShip.Size = new System.Drawing.Size(485, 56);
+            this.rtxtShip.Size = new System.Drawing.Size(552, 79);
             this.rtxtShip.TabIndex = 2;
             this.rtxtShip.Text = "";
             // 
@@ -92,15 +94,18 @@ namespace CustomControl
             this.panelShipName.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShipName.Location = new System.Drawing.Point(0, 0);
             this.panelShipName.Name = "panelShipName";
-            this.panelShipName.Size = new System.Drawing.Size(485, 36);
+            this.panelShipName.Size = new System.Drawing.Size(552, 43);
             this.panelShipName.TabIndex = 1;
             // 
             // txtShip
             // 
-            this.txtShip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtShip.Location = new System.Drawing.Point(53, 14);
+            this.txtShip.BackColor = System.Drawing.Color.Navy;
+            this.txtShip.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtShip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShip.Location = new System.Drawing.Point(57, 0);
             this.txtShip.Name = "txtShip";
-            this.txtShip.Size = new System.Drawing.Size(432, 22);
+            this.txtShip.Size = new System.Drawing.Size(495, 27);
             this.txtShip.TabIndex = 1;
             // 
             // picShip
@@ -109,7 +114,7 @@ namespace CustomControl
             this.picShip.Image = ((System.Drawing.Image)(resources.GetObject("picShip.Image")));
             this.picShip.Location = new System.Drawing.Point(0, 0);
             this.picShip.Name = "picShip";
-            this.picShip.Size = new System.Drawing.Size(53, 36);
+            this.picShip.Size = new System.Drawing.Size(57, 43);
             this.picShip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picShip.TabIndex = 0;
             this.picShip.TabStop = false;
@@ -119,9 +124,9 @@ namespace CustomControl
             this.picValidation.BackColor = System.Drawing.Color.Green;
             this.picValidation.Dock = System.Windows.Forms.DockStyle.Right;
             this.picValidation.Image = ((System.Drawing.Image)(resources.GetObject("picValidation.Image")));
-            this.picValidation.Location = new System.Drawing.Point(485, 0);
+            this.picValidation.Location = new System.Drawing.Point(552, 0);
             this.picValidation.Name = "picValidation";
-            this.picValidation.Size = new System.Drawing.Size(107, 92);
+            this.picValidation.Size = new System.Drawing.Size(123, 122);
             this.picValidation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picValidation.TabIndex = 0;
             this.picValidation.TabStop = false;
@@ -131,18 +136,20 @@ namespace CustomControl
             this.panelBeacon.Controls.Add(this.txtBeacon);
             this.panelBeacon.Controls.Add(this.picBeacon);
             this.panelBeacon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBeacon.Location = new System.Drawing.Point(0, 30);
+            this.panelBeacon.Location = new System.Drawing.Point(0, 37);
             this.panelBeacon.Name = "panelBeacon";
-            this.panelBeacon.Size = new System.Drawing.Size(592, 26);
+            this.panelBeacon.Size = new System.Drawing.Size(675, 34);
             this.panelBeacon.TabIndex = 1;
             // 
             // txtBeacon
             // 
+            this.txtBeacon.BackColor = System.Drawing.Color.DarkOrange;
+            this.txtBeacon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBeacon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBeacon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBeacon.Location = new System.Drawing.Point(44, 0);
+            this.txtBeacon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBeacon.Location = new System.Drawing.Point(50, 0);
             this.txtBeacon.Name = "txtBeacon";
-            this.txtBeacon.Size = new System.Drawing.Size(548, 28);
+            this.txtBeacon.Size = new System.Drawing.Size(625, 27);
             this.txtBeacon.TabIndex = 1;
             // 
             // picBeacon
@@ -152,7 +159,7 @@ namespace CustomControl
             this.picBeacon.Image = ((System.Drawing.Image)(resources.GetObject("picBeacon.Image")));
             this.picBeacon.Location = new System.Drawing.Point(0, 0);
             this.picBeacon.Name = "picBeacon";
-            this.picBeacon.Size = new System.Drawing.Size(44, 26);
+            this.picBeacon.Size = new System.Drawing.Size(50, 34);
             this.picBeacon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBeacon.TabIndex = 0;
             this.picBeacon.TabStop = false;
@@ -164,25 +171,28 @@ namespace CustomControl
             this.panelRoute.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRoute.Location = new System.Drawing.Point(0, 0);
             this.panelRoute.Name = "panelRoute";
-            this.panelRoute.Size = new System.Drawing.Size(592, 30);
+            this.panelRoute.Size = new System.Drawing.Size(675, 37);
             this.panelRoute.TabIndex = 0;
             // 
             // txtRoute
             // 
+            this.txtRoute.BackColor = System.Drawing.Color.DarkOrange;
+            this.txtRoute.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRoute.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoute.Location = new System.Drawing.Point(44, 0);
+            this.txtRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoute.Location = new System.Drawing.Point(50, 0);
             this.txtRoute.Name = "txtRoute";
-            this.txtRoute.Size = new System.Drawing.Size(548, 28);
+            this.txtRoute.Size = new System.Drawing.Size(625, 27);
             this.txtRoute.TabIndex = 1;
             // 
             // picRoute
             // 
+            this.picRoute.BackColor = System.Drawing.Color.Black;
             this.picRoute.Dock = System.Windows.Forms.DockStyle.Left;
             this.picRoute.Image = ((System.Drawing.Image)(resources.GetObject("picRoute.Image")));
             this.picRoute.Location = new System.Drawing.Point(0, 0);
             this.picRoute.Name = "picRoute";
-            this.picRoute.Size = new System.Drawing.Size(44, 30);
+            this.picRoute.Size = new System.Drawing.Size(50, 37);
             this.picRoute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picRoute.TabIndex = 0;
             this.picRoute.TabStop = false;
@@ -191,9 +201,10 @@ namespace CustomControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.panelMain);
             this.Name = "AccessControl";
-            this.Size = new System.Drawing.Size(592, 148);
+            this.Size = new System.Drawing.Size(675, 196);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.panelMain.ResumeLayout(false);
             this.panelShip.ResumeLayout(false);
