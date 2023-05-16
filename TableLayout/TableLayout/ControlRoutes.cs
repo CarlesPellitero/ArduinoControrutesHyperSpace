@@ -30,11 +30,11 @@ namespace TableLayout
         SqlDataAdapter sqadapter;
 
 
-        private int conteoCliks , NumeroButton;
+        private int conteoCliks, NumeroButton;
         SerialPort portArduino, portArduino2, portArduino3, portArduino4, portArduino5;
-        Thread EsperaResposta, EsperaResposta2, EsperaResposta3, EsperaResposta4, EsperaResposta5;
+        Thread EsperaResposta;
         string valor;
-        int colum, row,cont,cantidadPorts;
+        int colum, row, cont, cantidadPorts;
 
         DateTime date;
 
@@ -130,8 +130,8 @@ namespace TableLayout
             }
 
             //Primer insertarem els valors en la taula ROUTETRAFFIC
-            string hora = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
-            date = DateTime.ParseExact(hora, "yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture);
+            string hora = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fff");
+            date = DateTime.ParseExact(hora, "yyyy-MM-ddTHH:mm:ss.fff", CultureInfo.InvariantCulture);
 
 
             //DateTime date = DateTime.Now;
@@ -150,8 +150,8 @@ namespace TableLayout
                 "WHERE RouteTraffic.idTypeShip = ShipTypes.idTypeShip" +
                 " and RouteTraffic.idBeacon = ActiveBeacons.idActiveBeacon" +
                 " and ActiveBeacons.IdRoute = Routes.idRoute" +
-                " and DATEPART(DAY, TrafficDate) = '" + date.Month + "'" +
-                " and DATEPART(MONTH, TrafficDate) = '" + date.Day + "'" +
+                " and DATEPART(DAY, TrafficDate) = '" + date.Day + "'" +
+                " and DATEPART(MONTH, TrafficDate) = '" + date.Month + "'" +
                 " and DATEPART(HOUR, TrafficDate) >= '" + date.Hour + "'";
             sqadapter = new SqlDataAdapter(query, conn);
             conn.Open();
@@ -200,7 +200,7 @@ namespace TableLayout
                         tlpMap.Controls.Clear();
                         cont = 0;
                     }
-                    
+
                     tlpMap.Controls.Add(imatge, colum, row); //cotrol, colum row
                     cont++;
                 });
@@ -249,8 +249,8 @@ namespace TableLayout
             {
                 if (conn != null)
                 {
-                    query = "DELETE From RouteTraffic where DATEPART(DAY, TrafficDate) = '" + date.Month + "'" +
-                                                    " and DATEPART(MONTH, TrafficDate) = '" + date.Day + "'" +
+                    query = "DELETE From RouteTraffic where DATEPART(DAY, TrafficDate) = '" + date.Day + "'" +
+                                                    " and DATEPART(MONTH, TrafficDate) = '" + date.Month + "'" +
                                                     " and DATEPART(HOUR, TrafficDate) >= '" + date.Hour + "'";
 
                     conn.Open();
@@ -260,16 +260,23 @@ namespace TableLayout
                     conn.Close();
                 }
 
-                if(portArduino.IsOpen)
+                if (portArduino != null || portArduino2 != null)
                 {
-                    portArduino.Write("A\n");
-                    portArduino.Close();
-                }else if (portArduino2.IsOpen)
-                {
-                    portArduino2.Write("A\n");
-                    portArduino2.Close();
+                    if (portArduino.IsOpen)
+                    {
+                        portArduino.Write("A\n");
+                        portArduino.Close();
+                    }
+                    else if (portArduino2.IsOpen)
+                    {
+                        portArduino2.Write("A\n");
+                        portArduino2.Close();
+                    }
                 }
-                EsperaResposta.Abort();
+                if (EsperaResposta != null)
+                {
+                    EsperaResposta.Abort();
+                }
                 //EsperaResposta2.Abort();
                 //EsperaResposta3.Abort();
                 //EsperaResposta4.Abort();
@@ -278,8 +285,6 @@ namespace TableLayout
             catch (Exception)
             {
             }
-
-            
         }
 
 
@@ -325,131 +330,42 @@ namespace TableLayout
             //EsperaResposta5.Start();
         }
 
+        List<SerialPort> portsab = new List<SerialPort>();
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            if(cantidadPorts == 0)
+            portArduino = new SerialPort();
+            portArduino.BaudRate = 9600;
+            portArduino.PortName = cbPorts.Text;
+
+
+            if (portsab.Contains(portArduino))
             {
-                portArduino = new SerialPort();
-                portArduino.BaudRate = 9600;
-                portArduino.PortName = cbPorts.Text;
+                portsab.Add(portArduino);
+
                 portArduino.Open();
-
                 portArduino.Write("" + cbBeacons.Text + "\n");
-
                 EsperaResposta = new Thread(LisenerAnser);
-                EsperaResposta.Start();
-
-            }else if (cantidadPorts == 1)
-            {
-                portArduino2 = new SerialPort();
-                portArduino2.BaudRate = 9600;
-                portArduino2.PortName = cbPorts.Text;
-                portArduino2.Open();
-
-                portArduino2.Write("" + cbBeacons.Text + "\n");
-
-                EsperaResposta = new Thread(LisenerAnser2);
-                EsperaResposta.Start();
-            }
+                EsperaResposta.Start(portArduino);
+            }           
 
             cantidadPorts++;
 
         }
 
         //Pasar los puertos como valor para tener mas de uno
-        private void LisenerAnser()
+        private void LisenerAnser(Object port)
         {
+            SerialPort portavaible = (SerialPort)port;
             try
             {
-                if (portArduino != null)
+                if (portavaible != null)
                 {
-                    while (portArduino.IsOpen)
+                    while (portavaible.IsOpen)
                     {
 
-                        if (portArduino.BytesToRead > 0)
+                        if (portavaible.BytesToRead > 0)
                         {
-                            valor += portArduino.ReadLine();
-                            AfegirControl();
-                        }
-                    }
-                }                
-            }
-            catch (Exception)
-            { }
-        }
-        private void LisenerAnser2()
-        {
-            try
-            {
-                if (portArduino2 != null)
-                {
-                    while (portArduino2.IsOpen)
-                    {
-
-                        if (portArduino2.BytesToRead > 0)
-                        {
-                            valor += portArduino2.ReadLine();
-                            AfegirControl();
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            { }
-        }
-        private void LisenerAnser3()
-        {
-            try
-            {
-                if (portArduino3 != null)
-                {
-                    while (portArduino3.IsOpen)
-                    {
-
-                        if (portArduino3.BytesToRead > 0)
-                        {
-                            valor += portArduino3.ReadLine();
-                            AfegirControl();
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            { }
-        }
-        private void LisenerAnser4()
-        {
-            try
-            {
-                if (portArduino4 != null)
-                {
-                    while (portArduino4.IsOpen)
-                    {
-
-                        if (portArduino4.BytesToRead > 0)
-                        {
-                            valor += portArduino4.ReadLine();
-                            AfegirControl();
-                        }
-                    }
-                }
-            }
-            catch (Exception )
-            {
-            }
-        }
-        private void LisenerAnser5()
-        {
-            try
-            {
-                if (portArduino5 != null)
-                {
-                    while (portArduino5.IsOpen)
-                    {
-
-                        if (portArduino5.BytesToRead > 0)
-                        {
-                            valor += portArduino5.ReadLine();
+                            valor += portavaible.ReadLine();
                             AfegirControl();
                         }
                     }
