@@ -70,18 +70,17 @@ namespace CustomControl
             set { ValMsg = value; }
         }
 
-
-
-
         private void UserControl1_Load(object sender, EventArgs e)
         {
             if (ValMsg == Validations.Warning)
             {
                 picValidation.Image = Image.FromFile(Path.Combine(Application.StartupPath, "alert.png"));
+                picValidation.BackColor = Color.Red;
             }
+
             if (shipTypVar.Equals("First Order Navy Spaceship") || shipTypVar.Equals("First Order Consular Spaceship"))
             {
-                picShip.Image = Image.FromFile(Path.Combine(Application.StartupPath, "s tar-wars.png.png"));
+                picShip.Image = Image.FromFile(Path.Combine(Application.StartupPath, "star-wars.png"));
 
             }
             else if (shipTypVar.Equals("Cargo Spaceship"))
